@@ -1,0 +1,91 @@
+<html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="suduko.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <title>Suduko</title>
+</head>
+
+<body>
+
+    <div id="headline">
+        <h1>SUDUKO</h1>
+    </div>
+    <div id="loginForm">
+
+        <div class="inputs">
+            <input type="text" placeholder="username" id="userName" class="tooltop">
+            <p id="tooltiptext1">Wrong username!</p>
+            <input type="password" placeholder="password" id="passwordInput" class="tooltop">
+            <p id="tooltiptext2">Wrong password!</p>
+            <img src="https://static.thenounproject.com/png/777494-200.png" id="showPass" onmouseover="showPass()">
+            <a href="#" id="enterBtn" onclick="validateEnter() ">Enter</a>
+        </div>
+    </div>
+    <div id="buttons">
+        <h3 id="yourLevel">Choose Your Level</h3>
+        <div class="buttonsRow">
+            <button id="easyLevel" onclick="myFunction(), displayEasy(), randomEasy()">Easy</button>
+            <button id="mediumLevel" onclick="myFunction(), displayMadium(), randomMedium()">Medium</button>
+            <button id="hardLevel" onclick="myFunction(),displayHard(),randomHard()">Hard</button>
+        </div>
+    </div>
+    <div id="ingameBtn">
+        <h2 id="playerName"></h2>
+        <button id="easynewgame" onclick="newGameEasy()">New Game</button>
+        <button id="mediumnewgame" onclick="newGameMedium()">New Game</button>
+        <button id="hardnewgame" onclick="newGameHard()">New Game</button>
+        <button id="finishGame" onclick="checkMat()">Finish</button>
+        <button id="b2Lvl" onclick="back2Lvl()">Level</button>
+    </div>
+    <div id="theGame">
+
+        <input type="text" maxlength="1" id="c00"><input maxlength="1" type="text" id="c01"><input type="text" id="c02"
+            class="right" maxlength="1"><input type="text" id="c03" maxlength="1"><input type="text" id="c04"
+            maxlength="1"><input type="text" id="c05" class="right" maxlength="1"><input type="text" id="c06"
+            maxlength="1"><input type="text" id="c07" maxlength="1"><input type="text" id="c08" maxlength="1"><br>
+        <input type="text" id="c10" maxlength="1"><input type="text" id="c11" maxlength="1"><input type="text" id="c12"
+            class="right" maxlength="1"><input type="text" maxlength="1" id="c13" maxlength="1"><input type="text"
+            id="c14" maxlength="1"><input type="text" class="right" maxlength="1" id="c15" maxlength="1"><input
+            type="text" id="c16" maxlength="1"><input type="text" id="c17" maxlength="1"><input type="text" id="c18"
+            maxlength="1"><br>
+        <input type="text" id="c20" class="down" maxlength="1"><input type="text" maxlength="1" id="c21"
+            class="down"><input type="text" id="c22" class="right down" maxlength="1"><input type="text" maxlength="1"
+            id="c23" class="down"><input type="text" id="c24" class="down" maxlength="1"><input type="text" id="c25"
+            class="down right" maxlength="1"><input type="text" id="c26" class="down" maxlength="1"><input type="text"
+            maxlength="1" id="c27" class="down"><input type="text" id="c28" class="down"><br>
+        <input type="text" id="c30" maxlength="1"><input type="text" id="c31" maxlength="1"><input type="text"
+            class="right" id="c32" maxlength="1"><input type="text" id="c33" maxlength="1"><input type="text"
+            maxlength="1" id="c34"><input type="text" id="c35" class="right" maxlength="1"><input type="text" id="c36"
+            maxlength="1"><input type="text" id="c37" maxlength="1"><input type="text" id="c38" maxlength="1"><br>
+        <input type="text" maxlength="1" id="c40"><input type="text" id="c41" maxlength="1"><input type="text"
+            maxlength="1" id="c42" class="right"><input type="text" id="c43" maxlength="1"><input type="text" id="c44"
+            maxlength="1"><input type="text" class="right" id="c45" maxlength="1"><input type="text" id="c46"><input
+            type="text" id="c47" maxlength="1"><input type="text" id="c48" maxlength="1"><br>
+        <input type="text" id="c50" class="down" maxlength="1"><input type="text" id="c51" class="down"
+            maxlength="1"><input type="text" id="c52" class="right down" maxlength="1"><input type="text" id="c53"
+            class="down" maxlength="1"><input type="text" id="c54" class="down" maxlength="1"><input type="text"
+            id="c55" class="right down" maxlength="1"><input type="text" id="c56" class="down" maxlength="1"><input
+            type="text" maxlength="1" id="c57" class="down"><input type="text" id="c58" class="down" maxlength="1"><br>
+        <input type="text" id="c60" maxlength="1"><input type="text" maxlength="1" id="c61"><input type="text" id="c62"
+            class="right" maxlength="1"><input type="text" maxlength="1" id="c63"><input type="text" id="c64"
+            maxlength="1"><input type="text" maxlength="1" id="c65" class="right"><input type="text" id="c66"
+            maxlength="1"><input type="text" id="c67" maxlength="1"><input type="text" id="c68" maxlength="1"><br>
+        <input type="text" maxlength="1" id="c70"><input type="text" id="c71" maxlength="1"><input type="text"
+            maxlength="1" id="c72" class="right"><input type="text" id="c73" maxlength="1"><input type="text" id="c74"
+            maxlength="1"><input type="text" id="c75" class="right" maxlength="1"><input type="text" id="c76"
+            maxlength="1"><input type="text" maxlength="1" id="c77"><input type="text" id="c78"><br> <input type="text"
+            id="c80" maxlength="1"><input type="text" id="c81" maxlength="1"><input type="text" id="c82" class="right"
+            maxlength="1"><input type="text" id="c83" maxlength="1"><input type="text" id="c84" maxlength="1"><input
+            type="text" maxlength="1" id="c85" class="right"><input type="text" maxlength="1" id="c86"><input
+            type="text" id="c87" maxlength="1"><input type="text" maxlength="1" id="c88"><br>
+
+    </div>
+
+    <script type="text/javascript" src="suduko.js"></script>
+</body>
+
+</html>

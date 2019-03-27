@@ -1,0 +1,282 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+body{
+    background-image: url("wojtek-witkowski-275-unsplash.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: 100% 100%;
+  
+}
+
+  
+#loginForm{
+    visibility: visible;
+    border: 1px white solid;
+    width: 400px;
+    height: 240px;
+    color: rgb(255, 211, 211);
+    position:absolute;
+    left: 35%;
+    top: 200px;
+    background: rgba(0, 0, 0, 0.884);
+}
+
+
+#signIn{
+    text-align: center;
+    margin-bottom: none;
+    text-decoration: underline;
+}
+.inputs{
+    margin-top: 40px;
+    position: relative;
+}
+
+#userName {
+    /* height: 50px; */
+    padding-top:20px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    background: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    text-align: left;
+    font-size: 80%;
+}
+
+#userName:focus {
+    outline: none;
+    font-size: 80%;
+    color: white;
+    text-align: left;
+}
+
+#passwordInput:focus {
+    outline: none;
+    font-size: 80%;
+    color: white;
+    text-align: left;
+}
+
+#passwordInput{
+    /* height: 50px; */
+    padding-top: 20px;
+    color: white;
+    text-align: left;
+    display: block;
+    width: 80%;
+    font-size: 80%;
+    margin:auto;
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    margin-top: 20px;
+}
+
+#showPass{
+    background: rgba(255, 255, 255, 0.483);
+    height: 20px;
+    width: 20px;
+    font-size: 80%;
+    display: inline-block;
+    position: absolute;
+    right: 40;
+    text-align: left;
+    top:100px;
+}
+a{
+    position: relative;
+    top: 30px;
+    padding: 5px;
+    color: white;
+    height: 50px;
+    margin-left: 43%;
+    color: rgb(255, 211, 211);
+    font-size: 80%;
+    margin-top: 20px;
+    text-decoration: none;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.422);
+    border-bottom: rgb(255, 211, 211);
+}
+ 
+#tooltiptext1{
+    visibility: hidden ;
+    background: rgb(233, 151, 151);
+    color: black;
+    font-weight: bold;
+    border: 1px solid white;
+    position: absolute;
+    left:40px;
+    box-shadow: 1px 1px white;
+    padding: 5px;
+    
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+#tooltiptext2{
+    visibility: hidden ;
+    background: rgb(233, 151, 151);
+    color: black;
+    font-weight: bold;
+    border: 1px solid white;
+    position: absolute;
+    left:40px;
+    box-shadow: 1px 1px white;
+    padding: 5px;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+
+#headLine{
+    display: flex;
+    color: rgb(255, 211, 211);
+    align-items: center;
+    justify-content: center;
+    font-size: 110%;
+    background: rgba(0, 0, 0, 0.374);
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.422);
+    border-bottom: rgb(255, 211, 211);
+}
+#buttons{
+    visibility: hidden;
+    position: absolute;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px white solid;
+    width: 800px;
+    height: 240px;
+    color: rgb(255, 211, 211);
+    position:absolute;
+    left: 20%;
+    top: 200px;
+    background: rgba(0, 0, 0, 0.884);
+    
+}
+.buttonsRow{
+    display: flex;
+   
+}
+button{
+    margin: 20px;
+    font-size: 150%;
+    text-align: center;
+    background:transparent;
+    padding:1rem 1rem;
+    transition:all .5s ease;
+    letter-spacing:1px;
+    outline:none;
+    border: 1px white solid;
+    color: rgb(255, 211, 211);
+    background: rgba(0, 0, 0, 0.884);
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+
+
+button:hover { background: rgb(0, 0, 0);}
+
+button:active {
+    background: rgb(0, 0, 0);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+#goodluck{
+    display: block;;
+    font-size: 150%;
+    text-align: center;
+    margin-top: 0;
+}
+#theGame{
+visibility: hidden;
+    position: relative;
+    color: white;
+    background: rgba(192, 176, 176, 0.238);
+    top: 10px;
+    left: 400px;
+    width: 454px;
+    height: 454px;
+    border: 2px solid rgb(0, 0, 0);
+   border-collapse: collapse;
+   overflow: hidden;
+   z-index: 1;
+    
+}
+
+input{
+    outline: none;
+    width:50px;
+   background:  rgba(255, 234, 234, 0.564);
+    height: 50px;
+    font-size: 120%;
+    border: 1px solid rgba(152, 156, 161, 0.823);
+    text-align: center;
+}
+
+
+input[readOnly]{
+background: rgba(220, 158, 158, 0.775);
+}
+
+
+.right{
+    border-right:3px solid rgb(0, 0, 0);
+}
+.down{
+    border-bottom:3px solid rgb(0, 0, 0);
+}
+
+#easynewgame{
+    width: 90%;
+    display: none;
+    float: left;
+    display:block;
+}
+#mediumnewgame{
+    width: 90%;
+    float: left;
+    display:block;
+}
+#hardnewgame{
+    width: 90%;
+    float: left;
+    display:block;
+
+}
+
+
+#ingameBtn{
+    visibility: hidden;
+    text-align: center;
+    border: 1px white solid;
+    width: 300px;
+    height: 280px;
+    color: rgb(255, 211, 211);
+    position:absolute;
+    top:110px;
+    background: rgba(0, 0, 0, 0.884);
+}
+
+#finishGame{
+    bottom: 0;
+    float: left;
+}
+
+#b2Lvl{
+    position: absolute;
+    top: 174px;
+}
+#playerName{
+    color: white;
+}
